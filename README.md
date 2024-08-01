@@ -1,5 +1,34 @@
 # Docker Cronicle
 
+## Deployment
+
+- Create .env file
+- Launch compose
+
+```bash
+docker compose up -d
+```
+
+## Domain
+
+- Use a reverse proxy solution like https://github.com/javimosch/proxyflare
+
+## Advance configuration
+
+- Run a first time and copy the generated config file:
+
+```bash
+docker cp {containerId}:/opt/cronicle/conf/config.json .
+```
+
+- Configure using: https://github.com/jhuckaby/Cronicle/blob/master/docs/Configuration.md
+
+- Uncomment the volume 
+
+Original repo:  https://github.com/soulteary/docker-cronicle
+
+## Original readme
+
 [![Docker Build](https://github.com/soulteary/docker-cronicle/actions/workflows/release.yml/badge.svg?branch=main)](https://github.com/soulteary/docker-cronicle/actions/workflows/release.yml) [![Docker Image](https://img.shields.io/docker/pulls/soulteary/cronicle.svg)](https://hub.docker.com/r/soulteary/cronicle)
 
 <p style="text-align: center;">
